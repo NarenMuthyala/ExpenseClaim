@@ -1,1 +1,257 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #212121;
+    background-color: #fff;
+}
+
+h2.title {
+    font-size: 24px;
+}
+.page-layout {
+    background: #f5f5f5;
+    background: linear-gradient(#fff 80px, #f5f5f5 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+.page-layout .page-content {
+    padding: 40px 0;
+}
+
+.page-layout .page-content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto
+}
+
+/*.form-control, .btn {
+    border-radius: 0;
+    height: 36px;
+}*/
+
+@media (max-width:991px) {
+    .page-layout {
+        background: linear-gradient(#fff 64px, #f5f5f5 0)
+    }
+    .page-layout .page-content {
+        padding: 8px 0
+    }
+}
+
+
+.sux-page-header {
+    border-bottom: 1px solid rgb(228, 228, 228);
+    margin: 0;
+    padding: 12px 0;
+    position: relative
+}
+
+/*.sux-page-header .header-content {
+    min-height: 56px
+}
+
+@media (max-width:991px) {
+    .sux-page-header .header-content {
+        min-height: 40px
+    }
+}
+
+@media (min-width:768px) {
+    .sux-page-header {
+        z-index: 2
+    }
+    .sux-page-header .header-content {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+}*/
+
+.sux-primary-logo .link {
+    display: block
+}
+
+.sux-primary-logo .link:focus,
+.sux-primary-logo .link:hover {
+    text-decoration: none
+}
+
+.sux-primary-logo .brand {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5
+}
+
+.sux-primary-logo .logo{
+    background-position: left 50%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle
+}
+
+.sux-primary-logo .logo
+{
+    background-size: cover;
+    text-indent: -999px
+}
+
+.sux-primary-logo .logo {
+    height: 57px;
+    width: 195px;
+    background-image: url("/assets/img/logo.svg");
+}
+
+
+.sux-card {
+    border: 0;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+    margin-bottom: 24px;
+    background-color: #fff;
+}
+
+.sux-card .card-content {
+    padding: 20px 20px 20px 316px;
+    position: relative;
+    min-height: 185px;
+}
+
+.sux-card .card-content .hotel-desc{
+    font-size: 14px;
+    color: rgb(72, 72, 72);
+    margin-bottom: 10px;    
+}
+.sux-card .card-content .right-desc {
+    /*position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;*/
+    width: 130px;
+    border-left: 1px solid rgba(0, 0, 0, .10);    
+    padding: 10px;
+}
+.sux-card .card-content~.card-content {
+    border-top: 1px solid #e0e0e0
+}
+
+.sux-card .card-footer .btn-link,
+.sux-card .card-footer .link,
+.sux-card .card-header .btn-link,
+.sux-card .card-header .link {
+    font-size: 14px;
+    font-weight: 400
+}
+ 
+ .job-ads .sux-card .card-content .form-control {
+     border-radius: 0;
+     width: 80px !important;
+     padding-right: 2px;
+     height: 24px;
+     text-align: center;
+
+ }
+
+ .cart-summary .card-content {
+     padding: 20px;
+     height: auto;
+ }
+
+ .cart-summary .card-footer {
+     text-align: right;
+ }
+ .cart-summary .card-footer .btn {
+     min-width: 300px;
+     border-radius: 0;
+ }
+ 
+ .price {
+     color: #3c763d;
+     font-size: 18px;
+    /* margin-top: 20px;*/
+ }
+
+.sux-card .card-header {
+    margin-bottom: 16px
+}
+
+.sux-card .card-header:last-child {
+    margin-bottom: 0
+}
+
+.sux-card .card-header .subtitle,
+.sux-card .card-header .title {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+    margin: 0
+}
+
+.sux-card .title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4
+}
+
+.sux-card .card-footer {
+    margin-top: 16px
+}
+
+.sux-card  .card-img {
+    float: left;
+    width: 300px;
+}
+.sux-card .card-img {
+    display: block;
+    height: 160px;
+    background-image: url('/assets/img/hotel.jpg');
+    background-color: #757575;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+/*Page Footer*/
+.page-footer {
+    margin-top: 56px;
+    padding-bottom: 20px;
+    width: 100%;
+    color: #fff;
+    background-color: #0d3880;
+    padding: 20px 0;
+}
+
+.page-footer .legal-nav {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+
+@media (max-width:767px) {
+    .sux-card .card-content {
+        padding: 20px;
+        height: auto;
+    }   
+}
