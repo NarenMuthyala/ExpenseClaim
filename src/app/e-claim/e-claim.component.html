@@ -1,89 +1,85 @@
 <div class="container">
-  <div class="card">    
-    <div class="card-body">
-      <p>
-      e-claim works!
-    </p>
+  <div class="card">
+    <div class="card-body">     
+      <form #claimForm="ngForm" (ngSubmit)="submitClaim()">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Name</label>
+            <input type="text" required [(ngModel)]="claim.name" class="form-control" name="inputName"  id="inputName" placeholder="Name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputBrachCode">Branch Code( Office Division)</label>
+            <input type="text" [(ngModel)]="claim.branchCodeOffice"class="form-control" name="inputBrachCode" id="inputBrachCode" placeholder="Branch Code ">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputDate" class="col-2 col-form-label">Date</label>
+          <input class="form-control" [(ngModel)]="claim.date" type="date" name="inputDate" value="2011-08-19" id="inputDate">
+        </div>
+        <div class="form-group">
+          <label for="inputBankCode">Bank Code/ Branch code</label>
+          <input type="text" [(ngModel)]="claim.bankBranchCode" name="inputBankCode" class="form-control" id="inputBankCode" placeholder="Bank Code/ Branch code">
+        </div>
+        <div class="form-group">
+          <label for="inputBankAcNo">Bank-Account No:</label>
+          <input type="number" [(ngModel)]="claim.bankAcNumber" name="inputBankAcNo" class="form-control" id="inputBankAcNo" placeholder="Bank-Account Number">
+        </div>
 
-    <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputName">Name</label>
-      <input type="text" class="form-control" id="inputName" placeholder="Name">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputBrachCode">Branch Code( Office Division)</label>
-      <input type="text" class="form-control" id="inputBrachCode" placeholder="Branch Code ">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputDate" class="col-2 col-form-label">Date</label>    
-    <input class="form-control" type="date" value="2011-08-19" id="inputDate">
-  </div>
-  <div class="form-group">
-    <label for="inputBankCode">Bank Code/ Branch code</label>
-    <input type="text" class="form-control" id="inputBankCode" placeholder="Bank Code/ Branch code">
-  </div>
-  <div class="form-group">
-    <label for="inputBankAcNo">Bank-Account No:</label>
-    <input type="text" class="form-control" id="inputBankAcNo" placeholder="Bank-Account Number">
-  </div>
+        <div class="form-group">
+          <label for="inputNameAc"> Name in which A/C is held:</label>
+          <input type="text" [(ngModel)]="claim.nameInAC" class="form-control" name="inputNameAc" id="inputNameAc" placeholder=" Name in which A/C is held">
+        </div>
 
-   <div class="form-group">
-    <label for="inputNameAc"> Name in which A/C is held:</label>
-    <input type="text" class="form-control" id="inputNameAc" placeholder=" Name in which A/C is held">
-  </div>
+        <div class="form-group">
+          <label for="inputTransDate" class="col-2 col-form-label">Date of Transaction</label>
+          <input class="form-control" [(ngModel)]="claim.dateOfTransaction" name="inputTransDate" type="date" value="2011-08-19" id="inputTransDate">
+        </div>
 
-  <div class="form-group">
-    <label for="inputTransDate" class="col-2 col-form-label">Date of Transaction</label>    
-    <input class="form-control" type="date" value="2011-08-19" id="inputTransDate">
-  </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCostCenter">Cost Center</label>
+            <input type="text" [(ngModel)]="claim.costCenter" name="inputCostCenter" class="form-control" id="inputCostCenter" placeholder="Cost Center">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputGLCode">GL Code</label>
+            <input type="text" [(ngModel)]="claim.glCode" name="inputGLCode" class="form-control" id="inputGLCode" placeholder="Branch Code ">
+          </div>
+        </div>
 
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCostCenter">Cost Center</label>
-      <input type="text" class="form-control" id="inputCostCenter" placeholder="Cost Center">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputGLCode">GL Code</label>
-      <input type="text" class="form-control" id="inputGLCode" placeholder="Branch Code ">
-    </div>
-  </div>
+        <div class="form-group">
+          <label for="inputDesc"> Description:</label>
+          <input type="text" [(ngModel)]="claim.description" name="inputDesc" class="form-control" id="inputDesc" placeholder=" Description">
+        </div>
 
-   <div class="form-group">
-    <label for="inputDesc"> Description:</label>
-    <input type="text" class="form-control" id="inputDesc" placeholder=" Description">
-  </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCurrency">Currency</label>
+            <input type="text" [(ngModel)]="claim.currency" name="inputCurrency" class="form-control" id="inputCurrency" placeholder="Currency">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputAmount">Amount</label>
+            <input type="text" [(ngModel)]="claim.amount" name="inputAmount" class="form-control" id="inputAmount" placeholder="Amount ">
+          </div>
+        </div>
 
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCurrency">Currency</label>
-      <input type="text" class="form-control" id="inputCurrency" placeholder="Currency">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputAmount">Amount</label>
-      <input type="text" class="form-control" id="inputAmount" placeholder="Amount ">
-    </div>
-  </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputGst">GST</label>
+            <input type="text" [(ngModel)]="claim.gst" name="inputGst" class="form-control" id="inputGst" placeholder="GST">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputXeRate">Exchange Rate</label>
+            <input type="text" [(ngModel)]="claim.exchangeRate" name="inputXeRate" class="form-control" id="inputXeRate" placeholder="Exchange Rate">
+          </div>
+        </div>
 
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputGst">GST</label>
-      <input type="text" class="form-control" id="inputGst" placeholder="GST">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputXeRate">Exchange Rate</label>
-      <input type="text" class="form-control" id="inputXeRate" placeholder="Exchange Rate">
-    </div>
-  </div>
-  
-  <div class="form-group">
-    <label for="inputTotalAmt"> Total Amount(RM):</label>
-    <input type="text" class="form-control" id="inputTotalAmt" placeholder=" Total Amount(RM)">
-  </div>
+        <div class="form-group">
+          <label for="inputTotalAmt"> Total Amount(RM):</label>
+          <input type="text" [(ngModel)]="claim.totalAmout" class="form-control" name="inputTotalAmt" id="inputTotalAmt" placeholder=" Total Amount(RM)">
+        </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
 
   </div>

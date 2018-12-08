@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Claim } from '../models/claim';
 
 @Component({
   selector: 'app-e-claim',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./e-claim.component.css']
 })
 export class EClaimComponent implements OnInit {
+  claim: Claim;
+  private claimData : {};
 
-  constructor() { }
+  constructor() {
+    this.claim = new Claim();    
+   }
 
   ngOnInit() {
+   
+  }
+
+  submitClaim(){
+   this.claimData = JSON.stringify(this.claim)
+   console.log( this.claim);
   }
 
 }
