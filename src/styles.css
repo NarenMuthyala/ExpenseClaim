@@ -50,28 +50,29 @@ h2.title {
 }
 
 
-.sux-page-header {
+.page-header {
     border-bottom: 1px solid rgb(228, 228, 228);
     margin: 0;
     padding: 12px 0;
-    position: relative
+    position: relative;
+    background: #0F1941;
 }
 
-/*.sux-page-header .header-content {
+/*.page-header .header-content {
     min-height: 56px
 }
 
 @media (max-width:991px) {
-    .sux-page-header .header-content {
+    .page-header .header-content {
         min-height: 40px
     }
 }
 
 @media (min-width:768px) {
-    .sux-page-header {
+    .page-header {
         z-index: 2
     }
-    .sux-page-header .header-content {
+    .page-header .header-content {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
@@ -84,23 +85,23 @@ h2.title {
     }
 }*/
 
-.sux-primary-logo .link {
+.primary-logo .link {
     display: block
 }
 
-.sux-primary-logo .link:focus,
-.sux-primary-logo .link:hover {
+.primary-logo .link:focus,
+.primary-logo .link:hover {
     text-decoration: none
 }
 
-.sux-primary-logo .brand {
+.primary-logo .brand {
     margin: 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5
 }
 
-.sux-primary-logo .logo{
+.primary-logo .logo{
     background-position: left 50%;
     background-repeat: no-repeat;
     display: inline-block;
@@ -108,60 +109,48 @@ h2.title {
     vertical-align: middle
 }
 
-.sux-primary-logo .logo
+.primary-logo .logo
 {
     background-size: cover;
     text-indent: -999px
 }
 
-.sux-primary-logo .logo {
-    height: 57px;
-    width: 195px;
+.primary-logo .logo {
+    height: 31px;
+    width: 210px;
     background-image: url("/assets/img/logo.svg");
 }
 
 
-.sux-card {
+.card {
     border: 0;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
     box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
     margin-bottom: 24px;
     background-color: #fff;
+    border-radius: 0;
 }
 
-.sux-card .card-content {
+.card .card-content {
     padding: 20px 20px 20px 316px;
     position: relative;
     min-height: 185px;
 }
 
-.sux-card .card-content .hotel-desc{
-    font-size: 14px;
-    color: rgb(72, 72, 72);
-    margin-bottom: 10px;    
-}
-.sux-card .card-content .right-desc {
-    /*position: absolute;
-    top: 0;
-    height: 100%;
-    right: 0;*/
-    width: 130px;
-    border-left: 1px solid rgba(0, 0, 0, .10);    
-    padding: 10px;
-}
-.sux-card .card-content~.card-content {
+
+.card .card-content~.card-content {
     border-top: 1px solid #e0e0e0
 }
 
-.sux-card .card-footer .btn-link,
-.sux-card .card-footer .link,
-.sux-card .card-header .btn-link,
-.sux-card .card-header .link {
+.card .card-footer .btn-link,
+.card .card-footer .link,
+.card .card-header .btn-link,
+.card .card-header .link {
     font-size: 14px;
     font-weight: 400
 }
  
- .job-ads .sux-card .card-content .form-control {
+ .card .card-content .form-control {
      border-radius: 0;
      width: 80px !important;
      padding-right: 2px;
@@ -170,6 +159,7 @@ h2.title {
 
  }
 
+/*
  .cart-summary .card-content {
      padding: 20px;
      height: auto;
@@ -181,45 +171,40 @@ h2.title {
  .cart-summary .card-footer .btn {
      min-width: 300px;
      border-radius: 0;
- }
+ }*/
  
- .price {
-     color: #3c763d;
-     font-size: 18px;
-    /* margin-top: 20px;*/
- }
 
-.sux-card .card-header {
+.card .card-header {
     margin-bottom: 16px
 }
 
-.sux-card .card-header:last-child {
+.card .card-header:last-child {
     margin-bottom: 0
 }
 
-.sux-card .card-header .subtitle,
-.sux-card .card-header .title {
+.card .card-header .subtitle,
+.card .card-header .title {
     overflow-wrap: break-word;
     word-break: break-word;
     word-wrap: break-word;
     margin: 0
 }
 
-.sux-card .title {
+.card .title {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.4
 }
 
-.sux-card .card-footer {
+.card .card-footer {
     margin-top: 16px
 }
 
-.sux-card  .card-img {
+.card  .card-img {
     float: left;
     width: 300px;
 }
-.sux-card .card-img {
+.card .card-img {
     display: block;
     height: 160px;
     background-image: url('/assets/img/hotel.jpg');
@@ -237,7 +222,7 @@ h2.title {
     padding-bottom: 20px;
     width: 100%;
     color: #fff;
-    background-color: #0d3880;
+    background-color:#0F1941;;
     padding: 20px 0;
 }
 
@@ -250,7 +235,7 @@ h2.title {
 
 
 @media (max-width:767px) {
-    .sux-card .card-content {
+    .card .card-content {
         padding: 20px;
         height: auto;
     }   
