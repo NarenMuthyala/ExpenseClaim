@@ -1,84 +1,141 @@
 <div class="container">
   <div class="card">
-    <div class="card-body">     
+    <div class="card-body">
       <form #f="ngForm" (ngSubmit)="f.form.valid && submitClaim()">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputName">Name</label>
-            <input type="text" required [(ngModel)]="claim.name" class="form-control" name="inputName"  id="inputName" placeholder="Name" #name="ngModel" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }">
-            <span *ngIf="f.submitted && name.invalid"  class="invalid-error">
+            <input type="text" required [(ngModel)]="claim.name" class="form-control" name="inputName" id="inputName" placeholder="Name"
+              #name="ngModel" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }">
+            <span *ngIf="f.submitted && name.invalid" class="invalid-error">
               Name is required.
             </span>
           </div>
           <div class="form-group col-md-6">
             <label for="inputBrachCode">Branch Code( Office Division)</label>
-            <input type="text" [(ngModel)]="claim.branchCodeOffice"class="form-control" name="inputBrachCode" id="inputBrachCode" placeholder="Branch Code ">
+            <input type="text" required [(ngModel)]="claim.branchCodeOffice" class="form-control" name="inputBrachCode" id="inputBrachCode"
+              #branchCodeOfc="ngModel" [ngClass]="{ 'is-invalid': f.submitted && branchCodeOfc.invalid }" placeholder="Branch Code">
+            <span *ngIf="f.submitted && branchCodeOfc.invalid" class="invalid-error">
+              Branch Code( Office Division) is required.
+            </span>
           </div>
         </div>
         <div class="form-group">
           <label for="inputDate">Date</label>
-          <input class="form-control" [(ngModel)]="claim.date" type="date" name="inputDate" value="2011-08-19" id="inputDate">
+          <input class="form-control" required [(ngModel)]="claim.date" type="date" name="inputDate" value="2011-08-19" id="inputDate"
+            #date="ngModel" [ngClass]="{ 'is-invalid': f.submitted && date.invalid }">
+          <span *ngIf="f.submitted && date.invalid" class="invalid-error">
+              Date is required.
+          </span>
         </div>
         <div class="form-group">
           <label for="inputBankCode">Bank Code/ Branch code</label>
-          <input type="text" [(ngModel)]="claim.bankBranchCode" name="inputBankCode" class="form-control" id="inputBankCode" placeholder="Bank Code/ Branch code">
+          <input type="text" required [(ngModel)]="claim.bankBranchCode" name="inputBankCode" class="form-control" id="inputBankCode"
+            #bankCode="ngModel" [ngClass]="{ 'is-invalid': f.submitted && bankCode.invalid }" placeholder="Bank Code/ Branch code">
+          <span *ngIf="f.submitted && bankCode.invalid" class="invalid-error">
+              Bank Code/ Branch code is required.
+          </span>
         </div>
         <div class="form-group">
           <label for="inputBankAcNo">Bank-Account No:</label>
-          <input type="number" [(ngModel)]="claim.bankAcNumber" name="inputBankAcNo" class="form-control" id="inputBankAcNo" placeholder="Bank-Account Number">
+          <input type="number" required [(ngModel)]="claim.bankAcNumber" #bankAcNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && bankAcNumber.invalid }"
+            name="inputBankAcNo" class="form-control" id="inputBankAcNo" placeholder="Bank-Account Number">
+          <span *ngIf="f.submitted && bankAcNumber.invalid" class="invalid-error">
+              Valid Bank-Account Number is required.
+          </span>
         </div>
 
         <div class="form-group">
           <label for="inputNameAc"> Name in which A/C is held:</label>
-          <input type="text" [(ngModel)]="claim.nameInAC" class="form-control" name="inputNameAc" id="inputNameAc" placeholder=" Name in which A/C is held">
+          <input type="text" required [(ngModel)]="claim.nameInAC" #nameInAC="ngModel" [ngClass]="{ 'is-invalid': f.submitted && nameInAC.invalid }"
+            class="form-control" name="inputNameAc" id="inputNameAc" placeholder=" Name in which A/C is held">
+          <span *ngIf="f.submitted && nameInAC.invalid" class="invalid-error">
+              Name in which A/C is held is required.
+          </span>
         </div>
 
         <div class="form-group">
           <label for="inputTransDate">Date of Transaction</label>
-          <input class="form-control" [(ngModel)]="claim.dateOfTransaction" name="inputTransDate" type="date" value="2011-08-19" id="inputTransDate">
+          <input class="form-control" required [(ngModel)]="claim.dateOfTransaction" #dateOfTrans="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dateOfTrans.invalid }"
+            name="inputTransDate" type="date" value="2011-08-19" id="inputTransDate">
+          <span *ngIf="f.submitted && dateOfTrans.invalid" class="invalid-error">
+              Date of Transaction is required.
+          </span>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputCostCenter">Cost Center</label>
-            <input type="text" [(ngModel)]="claim.costCenter" name="inputCostCenter" class="form-control" id="inputCostCenter" placeholder="Cost Center">
+            <input type="text" [(ngModel)]="claim.costCenter" required #costCenter="ngModel" [ngClass]="{ 'is-invalid': f.submitted && costCenter.invalid }"
+              name="inputCostCenter" class="form-control" id="inputCostCenter" placeholder="Cost Center">
+            <span *ngIf="f.submitted && costCenter.invalid" class="invalid-error">
+              Cost Center is required.
+            </span>
           </div>
           <div class="form-group col-md-6">
             <label for="inputGLCode">GL Code</label>
-            <input type="text" [(ngModel)]="claim.glCode" name="inputGLCode" class="form-control" id="inputGLCode" placeholder="Branch Code ">
+            <input type="text" [(ngModel)]="claim.glCode" required #glCode="ngModel" name="inputGLCode" [ngClass]="{ 'is-invalid': f.submitted && glCode.invalid }"
+              class="form-control" id="inputGLCode" placeholder="Branch Code ">
+            <span *ngIf="f.submitted && glCode.invalid" class="invalid-error">
+              GL code is required.
+            </span>
           </div>
         </div>
 
         <div class="form-group">
           <label for="inputDesc"> Description:</label>
-          <input type="text" [(ngModel)]="claim.description" name="inputDesc" class="form-control" id="inputDesc" placeholder=" Description">
+          <input type="text" [(ngModel)]="claim.description" required #desc="ngModel" [ngClass]="{ 'is-invalid': f.submitted && desc.invalid }"
+            name="inputDesc" class="form-control" id="inputDesc" placeholder=" Description">
+          <span *ngIf="f.submitted && desc.invalid" class="invalid-error">
+              Description is required.
+          </span>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputCurrency">Currency</label>
-            <input type="text" [(ngModel)]="claim.currency" name="inputCurrency" class="form-control" id="inputCurrency" placeholder="Currency">
+            <input type="text" [(ngModel)]="claim.currency" required #curreny="ngModel" [ngClass]="{ 'is-invalid': f.submitted && curreny.invalid }"
+              name="inputCurrency" class="form-control" id="inputCurrency" placeholder="Currency">
+            <span *ngIf="f.submitted && curreny.invalid" class="invalid-error">
+              Currency is required.
+            </span>
           </div>
           <div class="form-group col-md-6">
             <label for="inputAmount">Amount</label>
-            <input type="text" [(ngModel)]="claim.amount" name="inputAmount" class="form-control" id="inputAmount" placeholder="Amount ">
+            <input type="number" [(ngModel)]="claim.amount" required #amount="ngModel" [ngClass]="{ 'is-invalid': f.submitted && amount.invalid }"
+              name="inputAmount" class="form-control" id="inputAmount" placeholder="Amount ">
+            <span *ngIf="f.submitted && amount.invalid" class="invalid-error">
+              Valid Amount is required.
+            </span>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputGst">GST</label>
-            <input type="text" [(ngModel)]="claim.gst" name="inputGst" class="form-control" id="inputGst" placeholder="GST">
+            <input type="text" [(ngModel)]="claim.gst" required #gst="ngModel" [ngClass]="{ 'is-invalid': f.submitted && gst.invalid }"
+              name="inputGst" class="form-control" id="inputGst" placeholder="GST">
+            <span *ngIf="f.submitted && gst.invalid" class="invalid-error">
+              GST is required.
+            </span>
           </div>
           <div class="form-group col-md-6">
             <label for="inputXeRate">Exchange Rate</label>
-            <input type="text" [(ngModel)]="claim.exchangeRate" name="inputXeRate" class="form-control" id="inputXeRate" placeholder="Exchange Rate">
+            <input type="text" [(ngModel)]="claim.exchangeRate" required #xeRate="ngModel" [ngClass]="{ 'is-invalid': f.submitted && xeRate.invalid }"
+              name="inputXeRate" class="form-control" id="inputXeRate" placeholder="Exchange Rate">
+            <span *ngIf="f.submitted && xeRate.invalid" class="invalid-error">
+              Exchange Rate is required.
+            </span>
           </div>
         </div>
 
         <div class="form-group">
           <label for="inputTotalAmt"> Total Amount(RM):</label>
-          <input type="text" [(ngModel)]="claim.totalAmout" class="form-control" name="inputTotalAmt" id="inputTotalAmt" placeholder=" Total Amount(RM)">
+          <input type="number" [(ngModel)]="claim.totalAmout" required #totalAmt="ngModel" [ngClass]="{ 'is-invalid': f.submitted && totalAmt.invalid }"
+            class="form-control" name="inputTotalAmt" id="inputTotalAmt" placeholder=" Total Amount(RM)">
+          <span *ngIf="f.submitted && totalAmt.invalid" class="invalid-error">
+             Valid Total Amount(RM) is required.
+          </span>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
