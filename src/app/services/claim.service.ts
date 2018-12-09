@@ -19,6 +19,7 @@ private headers;
   }
 
   saveData(claim: Claim){
+    //json-server mock api
      const url = 'http://localhost:3000/claims';
 
       return this.http.post(url, JSON.stringify(claim), { headers: this.getHeaders() } )
