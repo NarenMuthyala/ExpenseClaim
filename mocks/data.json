@@ -1,0 +1,24 @@
+{
+  "claims": [
+    {
+      "id": 1,
+      "name": "",
+      "branchCodeOffice": "",
+      "date": "",
+      "bankBranchCode": "",
+      "bankAcNumber": "",
+      "nameInAC": "",
+      "dateOfTransaction": "",
+      "costCenter": "",
+      "glCode": "",
+      "description": "",
+      "currency": "",
+      "amount": "",
+      "gst": "",
+      "exchangeRate": "",
+      "totalAmout": ""
+    }
+    
+  ]
+  
+}
