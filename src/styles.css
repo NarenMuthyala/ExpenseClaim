@@ -35,10 +35,10 @@ h2.title {
     flex: 1 0 auto
 }
 
-/*.form-control, .btn {
+.form-control, .btn {
     border-radius: 0;
     height: 36px;
-}*/
+}
 
 @media (max-width:991px) {
     .page-layout {
@@ -159,21 +159,6 @@ h2.title {
 
  }
 
-/*
- .cart-summary .card-content {
-     padding: 20px;
-     height: auto;
- }
-
- .cart-summary .card-footer {
-     text-align: right;
- }
- .cart-summary .card-footer .btn {
-     min-width: 300px;
-     border-radius: 0;
- }*/
- 
-
 .card .card-header {
     margin-bottom: 16px
 }
@@ -198,20 +183,6 @@ h2.title {
 
 .card .card-footer {
     margin-top: 16px
-}
-
-.card  .card-img {
-    float: left;
-    width: 300px;
-}
-.card .card-img {
-    display: block;
-    height: 160px;
-    background-image: url('/assets/img/hotel.jpg');
-    background-color: #757575;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
 }
 
 
