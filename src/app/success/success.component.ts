@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-success',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./success.component.css']
 })
 export class SuccessComponent implements OnInit {
+isSuccess: boolean;
+  constructor(private route: ActivatedRoute) { }
 
-  constructor() { }
+  ngOnInit() {    
 
-  ngOnInit() {
+    this.isSuccess = JSON.parse(this.route.snapshot.queryParamMap.get('isTrue'));    
+    
   }
 
 }
