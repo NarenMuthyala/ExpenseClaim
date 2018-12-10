@@ -7,7 +7,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'eclaim', pathMatch: 'full'},
   {path: 'eclaim', component: EClaimComponent},
   {path: 'claimsuccess', component: SuccessComponent},
-  {path: '**', component: EClaimComponent } //invalid page route to claim
+  {path: '**', redirectTo: 'eclaim' } //invalid page route to claim
 ];
 
 @NgModule({
