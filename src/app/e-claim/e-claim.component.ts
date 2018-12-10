@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Claim } from '../models/claim';
 import { ClaimService } from  '../services/claim.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class EClaimComponent implements OnInit {
   claim: Claim;
   private claimData : {};
 
-  constructor(private claimservice: ClaimService) {
+  constructor(private claimservice: ClaimService, private router: Router) {
     this.claim = new Claim();    
    }
 
@@ -25,6 +26,7 @@ export class EClaimComponent implements OnInit {
       .subscribe(result => {
         if (result) {          
          console.log('data saved successful');
+         this.router.navigate(['claimsuccess']);
         } else {         
          console.log('data save failed');
         }

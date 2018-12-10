@@ -8,14 +8,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { EClaimComponent } from './e-claim/e-claim.component';
-import { ClaimService } from  './services/claim.service'
+import { ClaimService } from  './services/claim.service';
+import { SuccessComponent } from './success/success.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    EClaimComponent
+    EClaimComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
